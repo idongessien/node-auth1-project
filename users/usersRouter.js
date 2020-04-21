@@ -3,7 +3,7 @@ const router = require('express').Router();
 const Users = require('./usersModel.js');
 const restricted = require('../auth/restricted.js');
   
-  router.get('/', restricted, (req, res) => {  // removed restricted to test Users component
+  router.get('/', restricted, (req, res) => { 
     Users.find()
       .then(users => {
         res.json(users);
